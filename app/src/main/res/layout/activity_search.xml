@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activity.SearchActivity">
+
+
+
+
+        <EditText
+            android:id="@+id/activity_search_tv_search"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@drawable/shape_text"
+            android:hint="Search"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:drawableStart="@drawable/ic_search_color"
+            android:textColor="@android:color/black"
+            android:inputType="text"/>
+
+
+
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_no"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="No Data Found ..."
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/_15sdp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_below="@+id/activity_search_tv_search"
+            android:id="@+id/activity_search_rv_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/item_categories"
+            android:layout_margin="@dimen/_10sdp" />
+
+
+
+</RelativeLayout>
